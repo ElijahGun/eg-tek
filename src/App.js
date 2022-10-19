@@ -1,9 +1,14 @@
-import './App.css';
+import './App.scss';
+import Navbar from './components/navbar/navbar.component';
+import { ProductHero } from './components/product-hero/product-hero';
+import { Footer } from './components/footer/footer';
 
 function App() {
   return (
     <div className="App">
-      <h2>Testing</h2>
+        <Navbar />
+        <ProductHero />
+        <Footer />
     </div>
   );
 }
