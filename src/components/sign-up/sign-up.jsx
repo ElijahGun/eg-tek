@@ -4,6 +4,9 @@ import {
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase";
 
+import './sign-up.scss';
+import Button from "../button/button";
+
 
 const defaultUser = {
   displayName: "",
@@ -49,16 +52,17 @@ const SignUp = () => {
   };
 
   return (
-    <div>
-      <h2>New User?</h2>
+    <div className="sign-up-container">
+      <h2 className="sign__heading">New User?</h2>
       <p>Sign up with Email & Password</p>
       <form onSubmit={handleSubmit}>
+      <div className="inputs">
         <input className="form-input" type="text" name="displayName" id="displayName" onChange={handleChange} />
-        <label htmlFor="displayName">displayName</label>
+        <label className="form-input--label" htmlFor="displayName">displayName</label>
         <input className="form-input" type="email" name="email" id="email" onChange={handleChange} />
-        <label htmlFor="email">email</label>
+        <label className="form-input--label" htmlFor="email">email</label>
         <input className="form-input" type="password" name="password" id="password" onChange={handleChange} />
-        <label htmlFor="password">password</label>
+        <label className="form-input--label" htmlFor="password">password</label>
         <input className="form-input"
           type="password"
           name="confirmPassword"
@@ -66,7 +70,8 @@ const SignUp = () => {
           onChange={handleChange}
         />
         <label htmlFor="confirmPassword">Confirm Password</label>
-        <button>Register</button>
+      </div>
+      <Button displayText={'Sign Up'} />
       </form>
     </div>
   );

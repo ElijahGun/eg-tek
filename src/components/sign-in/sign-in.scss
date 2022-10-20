@@ -2,7 +2,6 @@
 
 .sign-container {
     max-width: 98rem;
-    background-color: blue;
     margin: 0 auto;
     margin-top: 10vh;
     display: flex;
@@ -14,7 +13,39 @@
     }
 }
 
+.inputs {
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+}
+
 .form-input {
     display: block;
+    border: none;
+    border-bottom: 1px solid rgba(black, .7);
+    width: 75%;
+    margin: 1rem auto;
+    display: relative;
+    height: 4rem;
+
+    &:active,
+    &:focus {
+        outline: none;
+        border-bottom: 1.5px solid black;
+    }
+
+    &--label {
+        font-size: 1.25rem;
+        width: 100%;
+        display: absolute;
+        top: 0;
+        left: 0;
+        color: gray;
+    }
     
+}
+
+.sign__heading {
+    font-size: 3rem;
+    color: gray;
+    margin-bottom: 1rem;
 }

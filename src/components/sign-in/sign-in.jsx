@@ -1,8 +1,9 @@
 
 
-import { signInWithGooglePopup, signInWithGoogleRedirect, createUserDocumentFromAuth } from "../../utils/firebase/firebase";
+import { signInWithGooglePopup, signInWithGoogleRedirect, createUserDocumentFromAuth, signInAuthUserWithEmailAndPassword } from "../../utils/firebase/firebase";
 import SignUp from "../sign-up/sign-up";
 import './sign-in.scss';
+import Button from "../button/button";
 
 const SignIn = () => {
 
@@ -15,12 +16,16 @@ const SignIn = () => {
   return (
     <div className="sign-container">
       <div className="sign-in">
-      <h1>Have An Account?</h1>
+      <h1 className="sign__heading">Have An Account?</h1>
+      <p>Sign in with Email & Password</p>
+      <div className="inputs">
       <input className="form-input" type='email' required name='email' id='email'  />
-      <label htmlFor="email">Email</label>
+      <label className="form-input--label" htmlFor="email">Email</label>
       <input className="form-input" type='password' name='password' id='password'/>
-      <label htmlFor="password">Password</label>
-      <button onClick={logGoogleUser}>Sign in with Google</button>
+      <label className="form-input--label" htmlFor="password">Password</label>
+      </div>
+      <Button onClick={'TODO---'} displayText='Sign in with Email' />
+      <Button onClick={logGoogleUser} className='google-btn' displayText={'Sign in with Google'} />
       </div>
       <SignUp />
     </div>
