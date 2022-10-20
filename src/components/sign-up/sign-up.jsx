@@ -4,6 +4,7 @@ import {
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase";
 
+
 const defaultUser = {
   displayName: "",
   email: "",
@@ -52,13 +53,13 @@ const SignUp = () => {
       <h2>New User?</h2>
       <p>Sign up with Email & Password</p>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="displayName" id="displayName" onChange={handleChange} />
+        <input className="form-input" type="text" name="displayName" id="displayName" onChange={handleChange} />
         <label htmlFor="displayName">displayName</label>
-        <input type="email" name="email" id="email" onChange={handleChange} />
+        <input className="form-input" type="email" name="email" id="email" onChange={handleChange} />
         <label htmlFor="email">email</label>
-        <input type="password" name="password" id="password" onChange={handleChange} />
+        <input className="form-input" type="password" name="password" id="password" onChange={handleChange} />
         <label htmlFor="password">password</label>
-        <input
+        <input className="form-input"
           type="password"
           name="confirmPassword"
           id="confirmPassword"

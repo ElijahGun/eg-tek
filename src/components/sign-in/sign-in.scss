@@ -6,4 +6,15 @@
     margin: 0 auto;
     margin-top: 10vh;
     display: flex;
+
+    & > * {
+        width: 50%;
+        height: 60vh;
+        text-align: center;
+    }
+}
+
+.form-input {
+    display: block;
+    
 }
