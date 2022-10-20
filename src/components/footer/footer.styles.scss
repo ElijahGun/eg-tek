@@ -1,0 +1,14 @@
+
+
+
+.footer {
+    height: 15vh;
+    text-align: center;
+
+    &--text {
+        font-size: .8rem;
+        display: inline-block;
+        position: relative;
+        transform: translateY(5rem);
+    }
+}
